@@ -1,0 +1,587 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+body {
+    margin-left: 34px;
+    margin-right: 34px;
+    margin-top: 42px;
+    background-color: #F8F8F8;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header__top {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    width: 100%;
+}
+
+.header__top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header__title {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    text-align: left;
+}
+
+.header__burger {
+    display: none;
+}
+
+.header__logo {
+    margin-top: 18px;
+    width: 96px;
+    height: 50px;
+}
+
+.status {
+    display: flex;
+    justify-content: end;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.status__link {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.status__link--check::after,
+.status__link--repair::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+
+.status__link--check::after {
+    background-image: url('img/checkstatus.svg');
+}
+
+.status__link--repair::after {
+    background-image: url('img/repair.svg');
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu__item {
+    display: flex;
+    border-bottom: 2px solid transparent;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #7E7E82;
+}
+
+.menu__item:hover {
+    border: 2px solid #B8FFEC;
+    border-radius: 6px;
+    background-color: #FFFFFF;
+}
+
+.about-us {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 16px;
+    gap: 32px;
+}
+
+.about-us__text {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 49%;
+    min-width: 300px;
+}
+
+.about-us__photo {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 45%;
+    min-width: 300px;
+    order: 1;
+    max-width: 100%;
+    height: auto;
+}
+
+.about-us__button {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+    border: none;
+    background: none;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.about-us__button::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    background: url('img/arrow.svg');
+}
+
+
+@media (max-width: 768px) {
+    html, body {
+        margin-right: 0;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    .header {
+        padding: 0px;
+        flex-wrap: wrap;    
+    }
+
+    .header__top {
+        flex-direction: column; 
+        padding: 16px;
+        margin: 0;
+        background-color: #FFFFFF;
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+    .header__top-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap; 
+        width: 100%;
+        order: 0;
+    }
+
+    .header__burger {
+        display: block;
+    }
+
+    .header__center {
+        display: flex;
+        gap: 16px; 
+        margin-left: auto; 
+        order: 1;
+    }
+    
+    .header__left {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .header__right {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        order: 1;
+        margin-left: 16px; 
+    }
+    
+    .header__title {
+        order: 2; 
+        flex-basis: 100%; 
+        margin-bottom: 30px; 
+        padding-left: 16px; 
+        background-color: transparent;
+    }
+
+    .header__burger {
+        display: block;
+    }
+
+    .header__logo {
+        display: block; 
+        margin-top: 0;
+    }
+
+    .header__call,
+    .header__chat,
+    .header__profile {
+        display: block; 
+    }
+    
+    .status {
+        display: flex;
+        justify-content: flex-end;
+        gap: 16px;
+    }
+
+    .status__link span {
+        display: none; 
+    }
+
+    .status__link--check::after,
+    .status__link--repair::after {
+        display: block; 
+        width: 40px;
+        height: 40px;
+    }
+
+    .status__link--check::after {
+        background-image: url('img/checkstatus.svg'); 
+    }
+
+    .status__link--repair::after {
+        background-image: url('img/repair.svg'); 
+    }
+
+    .about-us__text {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .additional-text {
+        display: none;
+    }
+
+    .menu {
+        display: flex; 
+        flex-wrap: nowrap; 
+        overflow: auto; 
+        white-space: nowrap; 
+    }
+
+    }
+    
+
+@media (min-width: 769px) and (max-width: 1120px) {
+    .header__logo {
+        display: none; 
+    }
+    
+    .header__burger {
+        display: none; 
+    }
+    
+    .header {
+        padding: 0px;
+    }
+    
+    .header__top {
+        display: flex;
+        flex-direction: column; 
+        width: 100%;
+    }
+    
+    .status__link span {
+        display: flex; 
+    }
+    
+    .header__title {
+        flex-basis: 100%; 
+        margin-top: 24px;
+        margin-bottom: 24px;
+        padding-left: 16px; 
+        background-color: transparent;
+    }
+    
+    .header__top-row {
+        display: flex;
+        justify-content: space-between; 
+        align-items: center; 
+        width: 100%;
+        }
+
+    .header__center {
+        display: none; 
+    }
+
+    .header__right {
+        display: flex;
+        flex-direction: row;
+        gap: 16px; 
+        align-items: center; 
+    }
+    
+    .header__call,
+    .header__chat,
+    .header__profile {
+        display: none;
+    }
+
+        
+    }
+    
+    @media (min-width: 1120px) {
+    .header__logo {
+        display: none; 
+    }
+        
+    .header__burger {
+        display: none; 
+    }
+        
+    .header {
+        padding: 0px;
+    }
+        
+    .header__top {
+        display: flex;
+        flex-direction: column; 
+        width: 100%;
+    }
+    
+    .header__title {
+        flex-basis: 100%; 
+        margin-top: 24px;
+        margin-bottom: 24px;
+        padding-left: 16px; 
+        background-color: transparent;
+    }
+        
+    .header__top-row {
+        display: flex;
+        justify-content: space-between; 
+        align-items: center; 
+        width: 100%;
+    }
+    
+    .header__center {
+        display: none; 
+    }
+
+    .header__right {
+        display: flex;
+        flex-direction: row;
+        gap: 16px; 
+        align-items: center; 
+    }
+        
+    .header__call,
+    .header__chat,
+    .header__profile {
+        display: none;
+    }
+    
+        }
+
+    @media (max-width: 320px) {
+    html, body {
+        margin: 0;
+        padding: 0;
+    }
+        
+    .header {
+        padding: 0px;
+    }
+        
+    .header__top-row {
+        background-color: #FFFFFF;
+        padding-top: 18px;
+        position: relative;
+    }
+        
+    .header__center {
+        display: none;
+    }
+        
+    .header__burger::after {
+        content: "|";
+        color: #808080;
+    }
+        
+    .text-container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .about-us__description--more {
+        display: none;
+    }
+        
+    .about-us__text, 
+    .about-us__photo {
+        min-width: auto;
+    }
+        
+    .about-us__button {
+        margin: 12px 16px 0;
+    }
+        
+    .menu {
+        display: flex; 
+        flex-wrap: nowrap; 
+        overflow: auto; 
+        white-space: nowrap; 
+    }
+    
+    .header__call,
+    .header__chat,
+    .header__profile {
+        display: none;
+    }
+        
+    .status {
+        gap: 16px;
+    }
+        
+    .header__right {
+        display: flex;
+        order: 1;
+        justify-content: space-between;
+        gap: 8px;
+    }
+
+
+    .header__title {
+        flex-basis: 100%; 
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding-left: 16px; 
+        background-color: transparent;
+    }
+        
+    .status__link span {
+        display: none; 
+    }
+        
+    .status__link--check::after,
+    .status__link--repair::after {
+        display: block; 
+        width: 40px; 
+        height: 40px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+        
+    .status__link--check::after {
+        background-image: url('img/checkstatus.svg'); 
+    }
+        
+    .status__link--repair::after {
+        background-image: url('img/repair.svg'); 
+    }
+    
+    .header__logo {
+        display: block; 
+    }
+    
+    }
+
+
+    @media (min-width: 320px) and (max-width: 500px){
+    html, body {
+        margin: 0;
+        padding: 0;
+    }
+        
+    .header {
+        padding: 0px;
+        flex-wrap: wrap;    
+    }
+
+    .header__top {
+        background-color:#FFFFFF;
+        padding: 16px; 
+        margin:0px;
+    }
+        
+    .header__center {
+        display: none;
+    }
+        
+    .text-container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .about-us__description--more {
+        display: none;
+    }
+        
+    .about-us__text, 
+    .about-us__photo {
+        min-width: auto;
+    }
+        
+    .about-us__button {
+        margin: 12px 16px 0;
+    }
+        
+    .menu {
+        display: flex; 
+        flex-wrap: nowrap; 
+        overflow: auto; 
+        white-space: nowrap; 
+    }
+    
+    .header__call,
+    .header__chat,
+    .header__profile {
+        display: none;
+    }
+        
+    .status {
+        gap: 16px;
+    }
+        
+    .header__right {
+        display: flex;
+        justify-content: space-between;
+        gap: 8px;
+        flex-wrap: nowrap;
+    }
+        
+    .status__link span {
+        display: none; 
+    }
+        
+    .status__link--check::after,
+    .status__link--repair::after {
+        display: block; 
+        width: 40px; 
+        height: 40px;
+        background-position: center;
+    }
+        
+    .status__link--check::after {
+        background-image: url('img/checkstatus.svg'); 
+    }
+        
+    .status__link--repair::after {
+        background-image: url('img/repair.svg'); 
+    }
+        
+    .header__logo {
+        display: block;  
+    }
+
+    .header__title {
+        flex-basis: 100%; 
+        margin-top: 24px;
+        margin-bottom: 24px;
+        padding-left: 16px; 
+        background-color: transparent;
+    }
+    
+    }

@@ -1,33 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/kata.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kata Academy</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Центр по ремонту техники Dell</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div id="app">
-      <h3>Кодирование строки</h3>
-             
-              <textarea id="result" name="result" rows="5" cols="33"> </textarea>
-             
-       
-        <button id="code">Кодировать</button>
-       
-        <div>Результат:</div>
-        <div>
-        <textarea id="finalresult" name="result" rows="3" cols="33"> </textarea>
-        </div>
-       
-          <button id="copy">Скопировать в буфер обмена</button>
-       
-               
+    <header class="header">
+      <h1 class="header__title">Услуги и сервисы</h1>
+
+      <div class="header__top">
+        <div class="header__top-row">
+
+          <div class="header__left">
+      <button class="header__burger">
+        <img src="img/burger.svg" alt="Бургер меню">
+      </button>
+      <a href="/" class="header__logo">
+        <img src="/img/Group.svg" alt="Логотип">
+      </a>
     </div>
 
+    <div class="header__center">
+      <a href="/" class="header__call">
+        <img src="/img/call.svg" alt="Иконка звонок">
+      </a>
+      <a href="/" class="header__chat">
+        <img src="/img/chat.svg" alt="Иконка чат">
+      </a>
+      <a href="/" class="header__profile">
+        <img src="/img/profile.svg" alt="Иконка профиль">
+      </a>
+    </div>
 
-          <script type="module" src="/main.js"></script>
-      
-                
+    <div class="header__right">
+      <a href="/" class="status__link status__link--repair">
+        <span>Оставить заявку</span>
+      </a>
+      <a href="/" class="status__link status__link--check">
+        <span>Статус ремонта</span>
+      </a>
+    </div>
+  </div>
+</div>
+</header>
+    <main>
+      <nav>
+        <ul class="menu">
+        <li> 
+        <a href="#" class="menu__item">Ремонтируемые бренды</a>
+        </li>
+        <li>
+        <a href="#" class="menu__item">Дополнительные услуги</a>
+        </li>
+        <li> 
+        <a href="#" class="menu__item">Цены на услуги</a>
+        </li>
+        <li> 
+        <a href="#" class="menu__item">Адреса сервисных центров</a>
+        </li>
+        <li>
+        <a href="#" class="menu__item">Специальные цены</a>
+        </li>
+        <li >
+        <a href="#" class="menu__item">Отзывы</a>
+        </li>
+      </ul>
+      </nav>
+      <section>
+      <div class="about-us">
+        <div class="about-us__text">
+        <p class="about-us__description">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
+        <p class="about-us__description about-us__description--more">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, <span class="additional-text">что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</span></p>
+        <button class="about-us__button">Читать далее</button>
+      </div>
+
+        <img class="about-us__photo" src="img/_MG_3223.svg" alt="Фото с логотитпом и часами работы">
+        
+      </div>
+    </section>
+    </main>
+    <footer>
+      <!--Здесь будет подвал сайта-->
+    </footer>
   </body>
 </html>
