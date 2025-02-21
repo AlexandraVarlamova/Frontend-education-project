@@ -73,11 +73,6 @@ body {
   background-color: transparent;
 }
 
-.header__logo::after {
-  content: url(img/Group.svg);
-  display: block;
-}
-
 .header__left {
   display: flex;
   align-items: center;
@@ -206,11 +201,6 @@ body {
     align-items: center;
   }
 
-  .header__logo::after {
-    content: url(img/Group.svg);
-    display: block;
-  }
-
   .text-container {
     padding-left: 16px;
     padding-right: 16px;
@@ -270,10 +260,6 @@ body {
 
   .status__link--repair::after {
     background-image: url("img/repair.svg");
-  }
-
-  .header__divider::before {
-    display: none;
   }
 }
 
@@ -402,10 +388,6 @@ body {
     margin-bottom: 24px;
     background-color: transparent;
   }
-
-  .header__divider::before {
-    display: none;
-  }
 }
 
 @media (min-width: 768px) and (max-width: 1119px) {
@@ -481,10 +463,11 @@ body {
 
   .header__logo {
     display: flex;
+    align-items: center;
     margin-top: 0px;
   }
 
-  .header__divider::before {
+  .header__logo::before {
     content: "";
     display: inline-block;
     background-color: #eaeaea;
