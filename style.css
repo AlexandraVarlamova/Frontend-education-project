@@ -110,6 +110,10 @@ body {
   padding: 0;
 }
 
+.sidebar {
+    display: none;
+}
+
 .menu__item {
   display: flex;
   border-bottom: 2px solid transparent;
