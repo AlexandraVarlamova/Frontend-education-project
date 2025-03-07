@@ -26,13 +26,16 @@ body {
   margin-top: 0px;
 }
 
-.status_caption {
+.status__button--repair[aria-label="Оставить заявку"] {
+  display: none;
+}
+
+.status__button--check[aria-label="Статус ремонта"] {
   display: none;
 }
 
 .sidebar {
   background-color: #ffffff;
-  border: 1px solid #2a3230;
   box-shadow: 16px 0 52px rgba(14, 24, 80, 0.2);
   width: 320px;
   height: 100vh;
