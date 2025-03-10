@@ -43,6 +43,12 @@ body {
   z-index: 100;
 }
 
+.sidebar__menu-wrapper {
+    display: block; 
+    padding: 0;
+    margin: 0;
+  }
+
 .sidebar__menu {
   margin-top: 50px;
   list-style: none;
