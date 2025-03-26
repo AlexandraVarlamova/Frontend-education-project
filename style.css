@@ -191,6 +191,7 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 10px;
   max-height: 150px;
+  overflow: hidden;
 }
 
 .brand-gallery::-webkit-scrollbar {
