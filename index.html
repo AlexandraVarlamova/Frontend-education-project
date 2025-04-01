@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Центр по ремонту техники Dell</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
   <body>
     <header class="header">
@@ -102,41 +105,39 @@
         </div>
         <div class="brands-list">
           <h2 class="brands-list__title">РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</h2>
-          <div class="brand-gallery">
-            <div class="brand-item">
-              <img src="img/lenovo.svg" alt="Lenovo" />
-            </div>
-            <div class="brand-item">
-              <img src="img/samsung.svg" alt="Samsung" />
-            </div>
-            <div class="brand-item">
-              <img src="img/apple.svg" alt="Apple" />
-            </div>
-            <div class="brand-item">
-              <img src="img/viewsonic.svg" alt="ViewSonic" />
-            </div>
-            <div class="brand-item">
-              <img src="img/bosh.svg" alt="Bosch" />
-            </div>
-            <div class="brand-item">
-              <img src="img/hp.svg" alt="HP" />
-            </div>
-            <div class="brand-item">
-              <img src="img/aser.svg" alt="Acer" />
-            </div>
-            <div class="brand-item">
-              <img src="img/sony.svg" alt="Sony" />
-            </div>
-            <div class="brand-item">
-              <img src="img/lenovo.svg" alt="Lenovo" />
-            </div>
-            <div class="brand-item">
-              <img src="img/samsung.svg" alt="Samsung" />
-            </div>
-            <div class="brand-item">
-              <img src="img/apple.svg" alt="Apple" />
-            </div>
-            </div>
+          
+          <div class="swiper-container">
+            <!-- Обертка слайдов -->
+            <ul class="brand-gallery swiper-wrapper">
+                <li class="brand-gallery__item swiper-slide">
+                    <img class="brand-gallery__logo" src="img/lenovo.svg" alt="Lenovo" />
+                </li>
+                <li class="brand-gallery__item swiper-slide">
+                    <img class="brand-gallery__logo" src="img/samsung.svg" alt="Samsung" />
+                </li>
+                <li class="brand-gallery__item swiper-slide">
+                    <img class="brand-gallery__logo" src="img/apple.svg" alt="Apple" />
+                </li>
+                <li class="brand-gallery__item swiper-slide">
+                    <img class="brand-gallery__logo" src="img/viewsonic.svg" alt="ViewSonic" />
+                </li>
+                <li class="brand-gallery__item swiper-slide">
+                    <img class="brand-gallery__logo" src="img/bosh.svg" alt="Bosch" />
+                </li>
+                <li class="brand-gallery__item swiper-slide">
+                    <img class="brand-gallery__logo" src="img/hp.svg" alt="HP" />
+                </li>
+                <li class="brand-gallery__item swiper-slide">
+                    <img class="brand-gallery__logo" src="img/aser.svg" alt="Acer" />
+                </li>
+                <li class="brand-gallery__item swiper-slide">
+                    <img class="brand-gallery__logo" src="img/sony.svg" alt="Sony" />
+                </li>
+            </ul>
+    
+            
+            <div class="swiper-pagination"></div>
+        </div>
         <div class="scroll-indicators">
           <span class="scroll-indicator active"></span>
           <span class="scroll-indicator"></span>
@@ -144,7 +145,7 @@
           <span class="scroll-indicator"></span>
           <span class="scroll-indicator"></span>
         </div>
-      </div>
+      <div>
       <button class="brand-more__button">Показать все</button>
     </div>
       </section>
