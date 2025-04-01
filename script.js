@@ -15,9 +15,8 @@ button.addEventListener('click',  function onButtonClick() {
   
   const swiper = new Swiper('.swiper-container', {
     slidesPerView: 'auto',
-    spaceBetween: 0, // Устанавливаем 0, так как используем margin-right в слайдах
+    spaceBetween: 0,
     freeMode: true,
-    resistanceRatio: 0, // Для более плавной прокрутки
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
