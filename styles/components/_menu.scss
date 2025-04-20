@@ -1,0 +1,47 @@
+@import "../variables";
+@import "../mixins";
+
+.menu {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;  
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    display: flex;
+    border-bottom: 2px solid transparent;
+    padding: 10px;
+    font-size: 20px;
+    text-decoration: none;
+    color: $secondary-text-color;
+
+    &:hover {
+      border: 2px solid #b8ffec;
+      border-radius: 6px;
+      background-color: $white-background-color;
+    }
+  }
+
+  @include mobile-xs {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+    white-space: nowrap;
+  }
+
+  @include mobile {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+    white-space: nowrap;  
+  }
+
+  @include tablet {  
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+    white-space: nowrap;
+  }
+}

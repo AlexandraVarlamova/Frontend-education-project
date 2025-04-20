@@ -1,0 +1,169 @@
+@import "../variables";
+@import "../mixins";
+
+.sidebar {
+  background-color: #ffffff;
+  box-shadow: 16px 0 52px rgba(14, 24, 80, 0.2);
+  width: 320px;
+  height: 100vh;
+  position: fixed;
+  z-index: 1000;
+  transition: left 0.3s ease;
+  left: -400px;
+  top: 0;
+  overflow: hidden;
+
+  &.open {
+    left: 0;
+  }
+
+  &.closed {
+    left: -400px;
+  }
+
+  &__menu-wrapper {
+    display: block;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__menu {
+    margin-top: 50px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding-left: 0px;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 24px;
+    color: #1b1c21;
+    transition: color 0.3s ease;
+    text-decoration: none;
+
+    &--active {
+      color: #7e7e82;
+    }
+
+    &:hover {
+      color: #7e7e82;
+    }
+
+    &--active::before {
+      content: "";
+      background-color: #41f6d7;
+      height: 40px;
+      width: 4px;
+      display: block;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  .header {
+    &__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      width: 100%;
+      padding: 16px;
+      margin: 0px;
+    }
+
+    &__burger {
+      display: block;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      order: -1;
+
+      &::after {
+        display: block;
+        content: url(img/burgeraside.svg);
+        pointer-events: none;
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    &__left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    &__center {
+      display: none;
+    }
+
+    &__logo {
+      display: flex;
+      margin-top: 0;
+      gap: 16px;
+      margin-right: auto;
+    }
+
+    &__right {
+      display: flex;
+      order: 1;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    &__search {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background-color: none;
+      border: none;
+      box-shadow: none;
+      border-radius: 50%;
+
+      &::after {
+        content: url("img/search.svg");
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+      }
+    }
+  }
+
+  @include tablet {
+    .header {
+      &__top {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      &__logo::before {
+        content: "";
+        display: none;
+      }
+    }
+  }
+
+  @include desktop {
+    left: 0;
+    position: fixed;
+
+    &.closed {
+      left: 0;
+    }
+
+    .header {
+      &__top {
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+  }
+}

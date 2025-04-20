@@ -1,0 +1,302 @@
+@import "../variables";
+@import "../mixins";
+
+.prices {
+  padding: 20px;
+  font-family: inherit;
+
+  &__title {
+    margin-top: 30px;
+    padding: 16px;
+    font-size: 16px;
+    color: $secondary-text-color;
+    background-image: linear-gradient(
+      to right,
+      $main-background-color,
+      $white-background-color
+    );
+  }
+
+  &__table-container {
+    overflow-x: auto;
+    overflow: visible;
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    display: table;
+    max-height: 200px;
+
+    th,
+    td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid $brand-border-color;
+    }
+
+    th {
+      font-weight: bold;
+      color: $secondary-text-color;
+    }
+
+    td {
+      background-color: $white-background-color;
+      font-size: 14px;
+      margin: 0;
+    }
+  }
+
+  &__button {
+    background-color: $button-background-color;
+    color: $white-color;
+    border: none;
+    width: 119px;
+    padding: 8px 12px;
+    border-radius: 16px;
+    cursor: pointer;
+  }
+
+  &__footer {
+    margin-top: 20px;
+    font-size: 14px;
+    width: 420px;
+    text-align: left;
+
+    &-content {
+      font-size: 14px;
+      color: $primary-text-color;
+      margin-bottom: 10px;
+    }
+
+    &-link {
+      font-weight: bold;
+      color: $primary-text-color;
+      text-decoration: none;
+    }
+  }
+
+  @include mobile-xs {
+    &__table-desktop {
+      display: none;
+    }
+
+    &__mobile-slider {
+      display: block;
+      box-sizing: border-box;
+      width: 100%;
+      overflow: visible;
+      margin: 0;
+      padding: 0;
+
+      .swiper-wrapper {
+        padding-left: 16px;
+        padding-right: 16px;
+        box-sizing: border-box;
+        width: 100%;
+        overflow: visible;
+      }
+
+      .swiper-pagination {
+        position: absolute;
+        margin-top: 24px;
+        bottom: auto;
+      }
+    }
+
+    &__mobile-slide {
+      background-color: $white-background-color;
+      border-radius: 6px;
+      padding: 16px;
+      box-sizing: border-box;
+      width: 260px;
+      height: 180px;
+      position: relative;
+      display: block;
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+
+        td {
+          display: block;
+          border: none;
+          padding: 0;
+          margin-bottom: 12px;
+          font-size: 14px;
+          color: $primary-text-color;
+          text-align: left;
+
+          &:last-child {
+            margin-bottom: 0;
+            padding: 0;
+          }
+
+          &::before {
+            content: "";
+            display: block;
+            font-size: 14px;
+            line-height: 1.1;
+            color: $secondary-text-color;
+            margin-bottom: 4px;
+            font-weight: normal;
+          }
+
+          &:first-child::before {
+            content: "Ремонтные услуги";
+          }
+
+          &:nth-child(2)::before {
+            content: "Цена";
+          }
+
+          &:nth-child(3)::before {
+            content: "Срок";
+          }
+
+          &:nth-child(4) {
+            position: absolute;
+            top: 65%;
+            right: 16px;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    &__button {
+      background-color: $button-background-color;
+      color: $white-color;
+      border: none;
+      border-radius: 16px;
+      padding: 4px 12px;
+      font-size: 12px;
+      line-height: 24px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 32px;
+    }
+
+    &__footer {
+      width: 300px;
+      text-align: left;
+      padding: 16px;
+    }
+  }
+
+  @include mobile {
+    &__table-desktop {
+      display: none;
+    }
+
+    &__mobile-slider {
+      display: block;
+      box-sizing: border-box;
+      width: 100%;
+      overflow: visible;
+      margin: 0;
+      padding: 0;
+
+      .swiper-wrapper {
+        padding-left: 16px;
+        padding-right: 16px;
+        box-sizing: border-box;
+        width: 100%;
+        overflow: visible;
+      }
+    }
+
+    &__mobile-slide {
+      background-color: $white-background-color;
+      border-radius: 6px;
+      padding: 16px;
+      box-sizing: border-box;
+      width: 260px;
+      height: 200px;
+      position: relative;
+      display: block;
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+
+        td {
+          display: block;
+          border: none;
+          padding: 0;
+          margin-bottom: 12px;
+          font-size: 14px;
+          color: $primary-text-color;
+          text-align: left;
+
+          &:last-child {
+            margin-bottom: 0;
+            padding: 0;
+          }
+
+          &::before {
+            content: "";
+            display: block;
+            font-size: 14px;
+            line-height: 1.1;
+            color: $secondary-text-color;
+            margin-bottom: 4px;
+            font-weight: normal;
+          }
+
+          &:first-child::before {
+            content: "Ремонтные услуги";
+          }
+
+          &:nth-child(2)::before {
+            content: "Цена";
+          }
+
+          &:nth-child(3)::before {
+            content: "Срок";
+          }
+
+          &:nth-child(4) {
+            position: absolute;
+            top: 65%;
+            right: 16px;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    &__button {
+      background-color: $button-background-color;
+      color: $white-color;
+      border: none;
+      border-radius: 16px;
+      padding: 4px 12px;
+      font-size: 12px;
+      line-height: 24px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 32px;
+    }
+
+    &__footer {
+      width: 350px;
+      text-align: left;
+      padding: 16px;
+    }
+  }
+
+  @include tablet {
+    &__mobile-slider {
+      display: none;
+    }
+  }
+
+  @include desktop {
+    &__mobile-slider {
+      display: none;
+    }
+  }
+}

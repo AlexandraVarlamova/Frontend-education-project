@@ -1,0 +1,15 @@
+module.exports = {
+  env: {
+    browser: true,  // Для переменных типа `document`, `window`
+    es2021: true,   // Поддержка современного JS (ES6+)
+  },
+  extends: "eslint:recommended",  // Базовые правила ESLint
+  rules: {
+    "no-unused-vars": "warn",    // Предупреждение для неиспользуемых переменных
+    "no-console": "warn",        // Предупреждение для console.log
+    "semi": ["error", "always"]  // Ошибка при отсутствии ;
+  },
+  globals: {
+    Swiper: "readonly"  // Если используете Swiper
+  }
+};
