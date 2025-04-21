@@ -11,7 +11,8 @@ module.exports = {
 
   // Выходной файл
   output: {
-    filename: './js/bundle.js'
+    filename: './js/bundle.js',
+    publicPath: '/Frontend-education-project/'
   },
 
   // Source maps для удобства отладки
