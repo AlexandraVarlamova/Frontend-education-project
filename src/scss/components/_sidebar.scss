@@ -2,7 +2,7 @@
 @import "../mixins";
 
 .sidebar {
-  background-color: #ffffff;
+  background-color: $white-background-color;
   box-shadow: 16px 0 52px rgba(14, 24, 80, 0.2);
   width: 320px;
   height: 100vh;
@@ -44,16 +44,16 @@
     text-decoration: none;
 
     &--active {
-      color: #7e7e82;
+      color: $secondary-text-color;
     }
 
     &:hover {
-      color: #7e7e82;
+      color: $secondary-text-color;
     }
 
     &--active::before {
       content: "";
-      background-color: #41f6d7;
+      background-color: $element-background-color;
       height: 40px;
       width: 4px;
       display: block;
@@ -83,7 +83,7 @@
 
       &::after {
         display: block;
-        content: url(img/burgeraside.svg);
+        content: url(../img/burgeraside.svg);
         pointer-events: none;
         width: 40px;
         height: 40px;
@@ -126,7 +126,7 @@
       border-radius: 50%;
 
       &::after {
-        content: url("img/search.svg");
+        content: url(../img/search.svg);
         width: 40px;
         height: 40px;
         display: flex;

@@ -1,0 +1,78 @@
+@font-face {
+  font-family: 'TT Lakes';
+  src: url('../fonts/TTLakes-Regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'TT Lakes bold';
+  src: url('../fonts/TTLakes-Bold.woff') format('woff');
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  margin: 0px;
+  padding: 0px;
+
+  @include mobile-xs {
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+
+  @include mobile {
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+
+  @include tablet {
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+}
+
+body {
+  font-family: $main-font-family;
+  font-weight: 400;
+  color: $primary-text-color;
+  background-color: $main-background-color;
+
+  @include mobile-xs {
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+
+  @include mobile {
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+
+  @include tablet {
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+
+  @include desktop {
+    max-width: 1120px;
+    margin: auto;
+    margin-left: 350px;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.pink-text {
+  color: $accent-color;
+}
+
+.pink-arrow {
+  color: $accent-color;
+}

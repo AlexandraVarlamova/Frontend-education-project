@@ -1,3 +1,6 @@
+@import "../variables";
+@import "../mixins";
+
 .swiper {
   width: 240px;
   height: 72px;
@@ -23,11 +26,11 @@
     bottom: auto;
 
     &-bullet {
-      background: $disabled-background-color;
+      background: $inactive-bullet-color;
       margin-top: 0;
 
       &-active {
-        background: $inactive-background-color;
+        background: $active-bullet-color;
       }
     }
   }
@@ -35,6 +38,26 @@
   &-container {
     margin-bottom: 0;
     padding-bottom: 0;
+  }
+
+  
+
+  @include mobile {
+    &-pagination {
+      display: none;
+    }
+  }
+
+  @include tablet {
+    &-pagination {
+      display: none;
+    }
+  }
+
+  @include desktop {
+    &-pagination {
+      display: none;
+    }
   }
 
   @include mobile-xs {
@@ -66,24 +89,6 @@
       position: relative;
       margin-top: 10px;
       bottom: auto;
-    }
-  }
-
-  @include mobile {
-    &-pagination {
-      display: none;
-    }
-  }
-
-  @include tablet {
-    &-pagination {
-      display: none;
-    }
-  }
-
-  @include desktop {
-    &-pagination {
-      display: none;
     }
   }
 }

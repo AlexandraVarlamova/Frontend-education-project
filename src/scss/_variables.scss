@@ -7,6 +7,9 @@ $footer-text-color: #555;
 $disabled-color: #aaa;                 
 $grey-color: #666;  
 $inherit-color: inherit;
+$accent-color: #ff3e79;
+$active-bullet-color: #b5b6bc; 
+$inactive-bullet-color: #dddddd;  
 
 
 // background-color
@@ -22,9 +25,9 @@ $inactive-background-color: #b5b6bc;
 $white: #fff;
 
 // Fonts
-$main-font: "TT Lakes", sans-serif;
-$bold-font: "TT Lakes bold", sans-serif;
-$inherit-font: inherit;
+$main-font-family: "TT Lakes", sans-serif;
+$bold-font-family: "TT Lakes bold", sans-serif;
+$inherit-font-family: inherit;
 
 // Breakpoints
 $breakpoint-mobile-xs: 320px;

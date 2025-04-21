@@ -18,11 +18,11 @@
     }
 
     &--check::after {
-      background-image: url("img/checkstatus.svg");
+      background-image: url(../img/checkstatus.svg);
     }
 
     &--repair::after {
-      background-image: url("img/repair.svg");
+      background-image: url(../img/repair.svg);
       background-position: center;
     }
   }
@@ -42,11 +42,11 @@
       }
 
       &--check::after {
-        background-image: url("img/checkstatus.svg");
+        background-image: url(../img/checkstatus.svg);
       }
 
       &--repair::after {
-        background-image: url("img/repair.svg");
+        background-image: url(../img/repair.svg);
       }
     }
   }
@@ -70,11 +70,11 @@
       }
 
       &--check::after {
-        background-image: url("img/checkstatus.svg");
+        background-image: url(../img/checkstatus.svg);
       }
 
       &--repair::after {
-        background-image: url("img/repair.svg");
+        background-image: url(../img/repair.svg);
       }
     }
   }
@@ -98,11 +98,11 @@
       }
 
       &--check::after {
-        background-image: url("img/checkstatus.svg");
+        background-image: url(../img/checkstatus.svg);
       }
 
       &--repair::after {
-        background-image: url("img/repair.svg");
+        background-image: url(../img/repair.svg);
       }
     }
   }
@@ -112,7 +112,7 @@
       &--repair,
       &--check {
         text-decoration: none;
-        font-family: "TT Lakes", sans-serif;
+        font-family: $main-font-family;
         font-size: 16px;
         color: $primary-text-color;
       }

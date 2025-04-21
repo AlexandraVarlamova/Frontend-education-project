@@ -1,0 +1,171 @@
+@import "../variables";
+@import "../mixins";
+
+.footer {
+  &__icons {
+    display: flex;
+    gap: 16px;
+    padding: 16px;
+    position: absolute;
+    left: 0;
+    bottom: 150px;
+  }
+
+  &__call::after,
+  &__chat::after,
+  &__profile::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+  }
+
+  &__call::after {
+    background-image: url(../img/call.svg);
+  }
+
+  &__chat::after {
+    background-image: url(../img/chat.svg);
+  }
+
+  &__profile::after {
+    background-image: url(../img/profile.svg);
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: left;
+    position: absolute;
+    padding: 16px;
+    bottom: 0;
+    z-index: 1001;
+  }
+
+  &__email {
+    color: $primary-text-color;
+    text-decoration: none;
+    font-size: 14px;
+    transition: opacity 0.3s;
+    margin-top: 16px;
+  }
+
+  &__phone {
+    color: $primary-text-color;
+    font-family: $bold-font-family, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
+    transition: opacity 0.3s;
+  }
+
+  &__email:hover,
+  &__phone:hover {
+    opacity: 0.7;
+  }
+
+  &__language {
+    display: inline-block;
+    gap: 7px;
+
+    &--active {
+      color: $secondary-text-color;
+    }
+
+    &:hover {
+      color: $secondary-text-color;
+    }
+  }
+
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $secondary-text-color;
+  }
+
+  &-left,
+  &-center,
+  &-right {
+    flex: 1;
+  }
+
+  &-left {
+    text-align: left;
+    padding: 0;
+  }
+
+  &-right {
+    text-align: right;
+    margin-bottom: 0;
+  }
+
+  &-center a {
+    color: $secondary-text-color;
+    text-decoration: none;
+  }
+
+  @include mobile-xs {
+    &-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    &-left,
+    &-center,
+    &-right {
+      margin-bottom: 10px;
+    }
+
+    &-left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    &-right {
+      text-align: center;
+      margin-bottom: 0;
+    }
+  }
+
+  @include mobile {
+    &-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    &-left,
+    &-center,
+    &-right {
+      margin-bottom: 10px;
+    }
+
+    &-left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    &-right {
+      text-align: center;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.main-footer {
+  text-align: center;
+  font-size: 14px;
+  margin: 16px;
+}

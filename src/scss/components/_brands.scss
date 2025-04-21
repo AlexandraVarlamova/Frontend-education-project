@@ -44,7 +44,7 @@
     flex: 0 0 240px;
 
     &::after {
-      content: url(img/go.svg);
+      content: url(../img/go.svg);
       height: 40px;
       width: 40px;
       position: absolute;
@@ -75,7 +75,7 @@
     content: "";
     width: 24px;
     height: 24px;
-    background: url("img/arrow.svg");
+    background: url(../img/arrow.svg);
     transition: transform 0.3s ease;
   }
 

@@ -1,5 +1,5 @@
-@import "../variables";
-@import "../mixins";
+@import '../variables';
+@import '../mixins';
 
 .about-us {
   display: flex;
@@ -15,6 +15,14 @@
     margin-top: 16px;
     padding-left: 16px;
     padding-right: 16px;
+  }
+
+  &__description {  
+    line-height: 1.5;  
+  }
+
+  &__description--more {  
+    line-height: 1.5; 
   }
 
   &__photo {
@@ -38,21 +46,23 @@
     margin: 12px 16px 0;
 
     &::before {
-      content: "";
+      content: '';
       width: 24px;
       height: 24px;
-      background: url("img/arrow.svg");
+      background: url('../img/arrow.svg');
     }
   }
 
-  &__description--more {
-    display: none;
-  }
+ 
 
   @include mobile-xs {
     &__text,
     &__photo {
       min-width: auto;
+    }
+
+    &__description--more {
+      display: none;
     }
   }
 
@@ -65,6 +75,10 @@
     &__button {
       margin: 12px 16px 0;
     }
+
+    &__description--more {
+      display: none;
+    }
   }
 
   @include tablet {
@@ -76,11 +90,24 @@
     &__additional-text {
       display: none;
     }
+
+    &__description--more {
+      display: none;
+    }
+  }
+
+  &__button {
+    margin-left: 0;
   }
 
   @include desktop {
-    &__description {
-      margin-left: 16px;
+    &__additional-text {
+      display: block;
     }
-  }
+
+    &__description--more {
+      display: block;
+      margin-top: 16px;
+    }
+}
 }
