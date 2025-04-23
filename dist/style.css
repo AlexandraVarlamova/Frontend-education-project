@@ -633,8 +633,8 @@ body {
     text-align: left;
     position: relative;
     height: 72px;
-    align-items: center;
-    flex: 0 0 240px; }
+    flex: 0 0 240px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; }
     .brand-gallery__item::after {
       content: url(./static/go.svg);
       height: 40px;
@@ -646,6 +646,10 @@ body {
     .brand-gallery__item__logo {
       max-width: 100%;
       height: auto; }
+    .brand-gallery__item:hover {
+      border-color: #666;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transform: scale(1.05); }
 
 .brand-more__button {
   display: flex;
