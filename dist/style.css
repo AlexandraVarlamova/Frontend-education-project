@@ -445,14 +445,14 @@ body {
   padding: 0; }
   .menu__item {
     display: flex;
-    border-bottom: 2px solid transparent;
+    border: 2px solid transparent;
+    border-radius: 6px;
     padding: 10px;
     font-size: 20px;
     text-decoration: none;
     color: #7e7e82; }
     .menu__item:hover {
       border: 2px solid #b8ffec;
-      border-radius: 6px;
       background-color: #ffffff; }
   @media (max-width: 320px) {
     .menu {
