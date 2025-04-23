@@ -29,6 +29,10 @@
     flex-wrap: nowrap;
     overflow: auto;
     white-space: nowrap;
+
+    &::-webkit-scrollbar {  
+      display: none;
+    }
   }
 
   @include mobile {
@@ -36,6 +40,10 @@
     flex-wrap: nowrap;
     overflow: auto;
     white-space: nowrap;  
+
+    &::-webkit-scrollbar {  
+      display: none;
+    }
   }
 
   @include tablet {  
