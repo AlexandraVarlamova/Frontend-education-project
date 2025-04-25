@@ -18,12 +18,18 @@ html {
     margin-right: 0px;
     margin-left: 0px;
     margin-top: 0px;
+    &::-webkit-scrollbar {  
+      display: none;
+    }
   }
 
   @include mobile {
     margin-right: 0px;
     margin-left: 0px;
     margin-top: 0px;
+    &::-webkit-scrollbar {  
+      display: none;
+    }
   }
 
   @include tablet {
