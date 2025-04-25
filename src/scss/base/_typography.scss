@@ -44,6 +44,7 @@ body {
   font-weight: 400;
   color: $primary-text-color;
   background-color: $main-background-color;
+  overflow-x: hidden;
 
   @include mobile-xs {
     margin-right: 0px;
