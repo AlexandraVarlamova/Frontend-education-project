@@ -74,7 +74,8 @@ body {
   font-family: "TT Lakes", sans-serif;
   font-weight: 400;
   color: #1b1c21;
-  background-color: #f8f8f8; }
+  background-color: #f8f8f8;
+  overflow-x: hidden; }
   @media (max-width: 320px) {
     body {
       margin-right: 0px;
