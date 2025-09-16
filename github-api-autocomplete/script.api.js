@@ -9,7 +9,7 @@ let repos;
 containerForm.addEventListener("submit", submitForm);
 containerRepo.addEventListener("click", closeRepo);
 
-//Валидация формы
+
 function submitForm(event) {
   event.preventDefault();
   clearAutoComplete(autoComplete);
@@ -17,7 +17,7 @@ function submitForm(event) {
   input.value = "";
 }
 
-//Удаление выбранного репозитория при нажатии на крестик
+
 function closeRepo(event) {
   if (event.target.tagName !== "BUTTON") return;
   toClearRepo(event.target.closest("div"));
@@ -33,22 +33,22 @@ const debounce = (fn, debounceTime) => {
   };
 };
 
-//Изменения поля ввода
-async function inputChange() {
-  console.log("inputChange вызвана!"); // Проверяем, вызывается ли функция
-  try {
-    const searchTerm = input.value.trim(); // Получаем текст из поля ввода
-    const url = `https://api.github.com/search/repositories?q=${searchTerm}&per_page=5`; // Формируем URL-адрес запроса
-    console.log("URL запроса:", url); // Выводим URL-адрес в консоль
 
-    const response = await fetch(url); // Отправляем запрос
+async function inputChange() {
+  console.log("inputChange вызвана!"); 
+  try {
+    const searchTerm = input.value.trim(); 
+    const url = `https://api.github.com/search/repositories?q=${searchTerm}&per_page=5`; 
+    console.log("URL запроса:", url); 
+
+    const response = await fetch(url); 
     if (!response.ok) {
       throw new Error(`Ошибка при запросе: ${response.status}`);
     }
     const data = await response.json();
     repos = data.items;
 
-    console.log("Результаты поиска:", repos); // Выводим результаты поиска
+    console.log("Результаты поиска:", repos); 
 
     if (!repos.length) {
       throw new Error("Не найден репозиторий. Попробуйте изменить имя");
@@ -64,7 +64,7 @@ async function inputChange() {
       containerForm.append(autoComplete);
     }
   } catch (error) {
-    console.error("Ошибка:", error); // Выводим сообщение об ошибке в консоль
+    console.error("Ошибка:", error); 
     clearAutoComplete(autoComplete);
     createMessage(error.message);
   }
@@ -77,7 +77,7 @@ async function inputChange() {
 const debounceFn = debounce(inputChange, 400);
 input.addEventListener("input", debounceFn);
 
-//Создание автокомплита
+
 function createElements() {
   let autoComplete = document.createElement("div");
   autoComplete.classList.add("autoComplete");
@@ -85,34 +85,34 @@ function createElements() {
     const item = document.createElement("div");
     item.classList.add("autoComplete-item");
     item.textContent = repo.name;
-    item.addEventListener("click", toSelectRepo); // Добавляем обработчик события здесь
+    item.addEventListener("click", toSelectRepo); 
     autoComplete.append(item);
   });
   return autoComplete;
 }
 
-//Показ сообщения об ошибке
+
 function createMessage(text) {
   message.classList.remove("hidden");
   message.classList.add("message");
   message.textContent = text;
 }
 
-//Удаление сообщения об ошибке
+
 function clearMessage() {
   message.classList.remove("message");
   message.classList.add("hidden");
   message.textContent = "";
 }
 
-//Удаление автокомплита
+
 function clearAutoComplete(item) {
   if (item) {
     item.remove();
   }
 }
 
-//Добавление выбранного репозитория в список
+
 function toSelectRepo(event) {
   let selectedRepo = document.createElement("div");
   let selectedRepoInfo = document.createElement("div");
@@ -134,7 +134,7 @@ function toSelectRepo(event) {
   submitForm(event);
 }
 
-//Удаление выбранного репозитория из списка
+
 function toClearRepo(item) {
   item.remove();
 }
